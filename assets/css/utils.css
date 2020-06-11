@@ -336,3 +336,9 @@ input::placeholder {
 .border-radius-r{
     border-radius: 50%;
 }
+.f-left{
+    float: left;
+}
+.f-right{
+    float: right;
+}

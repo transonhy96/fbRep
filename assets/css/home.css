@@ -193,6 +193,7 @@
 
 .right{
     width: 30%;
+    margin-top:40px;
     height: 100vh;
     position: fixed;
     right: 0;
@@ -304,6 +305,7 @@
 
 }
 .newfeed-item{
+    z-index: 999;
     width: 100%;
     height: 600px;
     border-radius: 5px;
@@ -335,7 +337,6 @@
 
 .newfeed-footer{
     height: 100px;
-    background-color: rgba(0,0,0,1);
 }
 /* .content{
     background-image: url(../imgs/imgPlaceholder.svg);
