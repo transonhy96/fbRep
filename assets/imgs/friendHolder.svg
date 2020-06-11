@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg21"
+   version="1.1"
+   preserveAspectRatio="none"
+   viewBox="0 0 148 40"
+   aria-labelledby="loading-aria"
+   height="40"
+   width="148"
+   role="img">
+  <metadata
+     id="metadata25">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <title
+     id="loading-aria">Loading...</title>
+  <rect
+     id="rect3"
+     style="fill:url(#fill)"
+     clip-path="url(#clip-path)"
+     height="100%"
+     width="100%"
+     y="0"
+     x="0" />
+  <defs
+     id="defs19">
+    <clipPath
+       id="clip-path">
+      <rect
+         id="rect5"
+         height="6"
+         width="100"
+         ry="3"
+         rx="3"
+         y="8"
+         x="48" />
+      <rect
+         id="rect7"
+         height="6"
+         width="60"
+         ry="3"
+         rx="3"
+         y="26"
+         x="48" />
+      <circle
+         id="circle9"
+         r="20"
+         cy="20"
+         cx="20" />
+    </clipPath>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="0"
+       x2="76.941536"
+       y1="0"
+       x1="0"
+       gradientTransform="scale(1.9235384,0.51987524)"
+       id="fill">
+      <stop
+         id="stop12"
+         stop-opacity="1"
+         stop-color="#f3f3f3"
+         offset="0.599964">
+        <animate
+           repeatCount="indefinite"
+           dur="2s"
+           keyTimes="0; 0.25; 1"
+           values="-2; -2; 1"
+           attributeName="offset" />
+      </stop>
+      <stop
+         id="stop14"
+         stop-opacity="1"
+         stop-color="#d0cdcd"
+         offset="1.59996">
+        <animate
+           repeatCount="indefinite"
+           dur="2s"
+           keyTimes="0; 0.25; 1"
+           values="-1; -1; 2"
+           attributeName="offset" />
+      </stop>
+      <stop
+         id="stop16"
+         stop-opacity="1"
+         stop-color="#f3f3f3"
+         offset="2.59996">
+        <animate
+           repeatCount="indefinite"
+           dur="2s"
+           keyTimes="0; 0.25; 1"
+           values="0; 0; 3"
+           attributeName="offset" />
+      </stop>
+    </linearGradient>
+  </defs>
+</svg>

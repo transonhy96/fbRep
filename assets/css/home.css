@@ -1,0 +1,448 @@
+#app{
+    width: 100vw;
+    height: auto;
+    position: relative;
+    background-color: #36393f;
+    font-family: Poppin!important;
+    scrollbar-width: thin;
+}
+
+.top-nav{
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 99999;
+    background-color: #36393f;
+    box-shadow: 0 .25rem .125rem 0 rgba(0,0,0,0.05);
+}
+.nav-left{
+    width: 25%;
+    position: relative;
+}
+.nav-logo-wrapper{
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.nav-logo{
+    background-image: url(../imgs/astroneer.jpg);
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    padding:1px;
+}
+.nav-search{
+    position: relative;
+    margin:5px;
+    
+}
+.icon-search{
+    position: absolute;
+    top:8px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    z-index: -1;
+   
+}
+.input-search{
+    width: 15px;
+    height: 70%;
+    margin-left: 30px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 9999px;
+    border-width: .125rem;
+    background-color: rgba(255,255,255,0.1);
+    border-style: solid;
+    outline: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    color:#fff;
+}
+.input-search:focus{
+    width: 100px;
+    transition: all .2s ease-in-out;
+    border-color:#4dabf7;
+    outline: none;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.0125),0 0 8px rgba(34,139,230,0.5);
+}
+.nav-center{
+    width: 45%;
+    justify-content: center;
+    height: 100%;
+}
+.nav-right{
+    width: 30%;
+    position: relative;
+}
+.icon-block{
+    height: inherit;
+    width: 20%;
+    position: relative;
+    transition: 0.1 ease-in-out;
+}
+.icon-block:hover{
+   background-color: rgba(255, 255, 255, 0.2);
+   transition: 0.1 ease-in-out;
+   border-radius: 5px;
+   cursor: pointer;
+}
+.icon{
+    background-image: url(../imgs/discord.svg);
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+    fill: #E4E6EB;
+}
+
+.my-info{
+    margin-left:40%;
+    height: 30px;
+    margin-top:2px;
+    width: 15%;
+    border-bottom-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    transition: .2s ease-in-out;
+    padding:3px;
+    
+}
+.my-info:hover{
+    background-color: rgba(255, 255,255, 0.1);
+    transition: .2s ease-in-out;
+}
+.my-info > img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    
+}
+.username{
+    display: inline-block;
+    margin:auto;
+    width: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: ivory;
+    font-size: small;
+}
+.feature-list{
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    height: 40px;
+    transform: translate(-50%);
+}
+.feature-icon{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-color: rgba(255, 255,255, 0.1);
+    position: relative;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+}
+.feature-icon:hover{
+    background-color: rgba(255, 255,255, 0.3);
+    transition: .1s ease-in-out;
+    transform: scale(101%);
+}
+.feature-icon-img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top:25%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.wrapper{
+    margin-top:60px;
+    position: relative;
+    height: 100vh;
+}
+.left{
+    height: 100vh;
+    width: 30%;
+    overflow: hidden;
+    position: fixed;
+}
+
+.center{
+    height: auto;
+    width: auto;
+    scrollbar-width: thin;
+    margin-left: 30%;
+    margin-right: 31%;
+}
+
+.right{
+    width: 30%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top:0;
+}
+.stories{
+    width: 90%;
+    height: 260px;
+    margin:auto;
+}
+.stories-item{
+    background-color: tomato;
+    width: calc((100% / 5) - 5px);
+    height: 80%;
+    border-radius: 8px;
+    margin:25px 5px;
+    position: relative;
+}
+.stories-avatar{
+    position: absolute;
+    top:10%;
+    left: 10%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.add-newfeed{
+    margin-top:25px;
+    height: 150px;
+    width: 100%;
+}
+.add-newfeed-avatar{
+    margin:25px 20px;
+    width: 5%;
+    height: auto;
+    cursor: pointer;
+}
+.thinking{
+    outline: none;
+    width: 95%;
+}
+.inner-thinking{
+    padding:5px 5px 5px 20px;
+    width: 90%;
+    height: 30px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top:25px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.inner-thinking:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all .2s ease-in-out;
+}
+.add-newfeed-avatar > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+}
+.add-newfeed-avatar > img:hover{
+    transition: all .2s ease-in-out;
+    background-color: rgba(255,255,255,.1);
+}
+.upper-newfeed{
+    margin-bottom: 10px;
+}
+.emote-newfeed{
+    width: 95%;
+    height: auto;
+    margin:auto;
+}
+.emotes-item{
+    width: 35%;
+    height: auto;
+    border-radius: 18px;
+    transition: all .2s ease-in-out;
+}
+.emotes-item:hover{
+    transition: all .2s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+.emote-text{
+    font-size: small;
+    display: block;
+    justify-content: center;
+    text-align: justify;
+}
+.emote-icon{
+    width: 20px;
+    height: 20px;
+}
+
+/* Newfeed */
+
+
+.newfeed{
+    width: 100%;
+    height: 100vh;
+    scrollbar-width: thin;
+
+}
+.newfeed-item{
+    width: 100%;
+    height: 600px;
+    border-radius: 5px;
+    margin-top:5px;
+    background-color: rgba(0,0,0,0.1);
+}
+.newfeed-header{
+    width: 90%;
+    padding-top: 20px;
+    margin:auto;
+}
+.newfeed-username{
+    text-align: left;
+    margin-left:20px;
+    font-size: medium;
+}
+.newfeed-info{
+    width: 90%;
+    height: 10%;
+    text-align: left;
+    margin:auto;
+}
+.newfeed-content{
+    width: 100%;
+    height: 600px;
+    margin:auto;
+    margin-top:10px;
+}
+
+.newfeed-footer{
+    height: 100px;
+    background-color: rgba(0,0,0,1);
+}
+/* .content{
+    background-image: url(../imgs/imgPlaceholder.svg);
+    width: 300px;
+    height: 400px;
+} */
+#modal2 {
+    margin-top:100px;
+}
+
+.modal{
+    font-family: Poppin!important;
+    max-width: 500px!important;
+    max-height: 500px!important;
+    height: 500px;
+    background-color: #36393f!important;
+
+}
+.shortcutLShort{
+    width: 60%;
+    margin-top:30px;
+    margin-left: 3%;
+    overflow: hidden;
+    
+}
+.shortcutMore{
+    width: 60%;
+    margin-left: 3%;
+}
+.shortcutIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shortcutName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newFeedH{
+    border-bottom: 1px solid rgba(255, 255,255, 0.1);
+    height: 50px;
+    width: 100%;
+}
+.newFeedM{
+    margin: auto;
+}
+
+.rightNewFeedM{
+    margin-left: 10px;
+}
+.centerNewFeed{
+    width: 100%;
+    height: 50%;
+}
+.centerNewFeedText{
+    width: 100%;
+    height: 90%;
+    resize:none;
+    overflow:auto;
+    margin: auto;
+    border:0px;
+    outline:0px;
+    background-color:transparent;
+}
+.actionBtnNewFeed{
+    border: rgba(255, 255,255, 0.1) 1px solid;
+    padding:5px;
+    border-radius: 10px;
+    transition: all 0.1 ease-in-out;
+}
+
+.addPost{
+    color: rgba(255, 255,255, 0.9);
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: all 0.1 ease-in-out;
+}
+
+.emoteItem{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    margin: 2px;
+}
+.btnAddNewFeed{
+    background-color: rgba(255, 255,255, 0.2);
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgba(255, 255,255, 0.9);
+    transition: all 0.1 ease-in-out;
+}
+.btnAddNewFeed:hover{
+    background-color: rgba(255, 255,255, 0.3);
+    transition: all 0.1 ease-in-out;
+}
+
+
+.friends{
+    width: 70%;
+    float: right;
+    margin-right: 15px;
+    margin-top:25px;
+}
+.friend-action{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}

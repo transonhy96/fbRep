@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./assets/css/utils.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+</head>
+<body>
+    <div id="app">
+        <nav class="top-nav flex">
+            <div class="nav-left ">
+                <div class="nav-logo-wrapper flex">
+                    <div class="nav-logo brand-img">    `   
+                    </div>
+                    <div class="nav-search">
+                        <input type="text"  class="input-search">
+                        <img src="./assets/imgs/search.svg" class="icon-search"/>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-center flex">
+                <div class="icon-block">
+                    <div class="active"> 
+                        <img class="wh25x25 icon tooltip" data-body="Home page" src="./assets/imgs/home.svg" alt=""/>
+                    </div>
+                </div>
+                <div class="icon-block">
+                    <div class=""> 
+                        <img class="wh25x25 icon tooltip" data-body="Home page" src="./assets/imgs/user-friends-solid.svg" alt=""/>
+                    </div>
+                </div>
+                <div class="icon-block">
+                    <div class=""> 
+                        <img class="wh25x25 icon tooltip" data-body="Home page" src="./assets/imgs/camera-solid.svg" alt=""/>
+                    </div>
+                </div>
+                <div class="icon-block">
+                    <div class=""> 
+                        <img class="wh25x25 icon tooltip" data-body="Home page" src="./assets/imgs/game.svg" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-right flex">
+                <div class="feature-list flex">
+                    <div class="my-info flex">
+                        <img src="./assets/imgs/sern.jpg" alt="">
+                        <span class="username">Tran Hong Son</span>
+                    </div>
+                    <div class="feature-icon ml5">
+                        <img class="feature-icon-img htmlTooltip" data-show-onclick="true" data-tooltip="#modal1" src="./assets/imgs/plus-thin.svg" alt="" width="20" height="20">
+                    </div>
+                    <div class="feature-icon ml5">
+                        <img class="feature-icon-img htmlTooltip" data-show-onclick="true" data-tooltip="#modal1" src="./assets/imgs/facebook-messenger-brands.svg" alt="" width="20" height="20">
+                    </div>
+                    <div class="feature-icon ml5">
+                        <img class="feature-icon-img htmlTooltip" data-show-onclick="true" data-tooltip="#modal1" src="./assets/imgs/bell-solid.svg" alt="" width="20" height="20">
+                    </div>
+                    <div class="feature-icon ml5">
+                        <img class="feature-icon-img htmlTooltip" data-show-onclick="true" data-tooltip="#modal1" src="./assets/imgs/caret-down-solid.svg" alt="" width="20" height="20">
+                    </div>
+                </div>
+            </div>
+            
+        </nav>
+        <div class="wrapper flex" id="main">
+            <div class="left">
+                <div class="shortcutLShort flex-col">
+                    <div class="shortcutItem flex btn-hover">
+                        <div class="shortcutIcon p5">
+                            <img class="avatar sm-icon" src="./assets/imgs/sern.jpg" alt="">
+                        </div>
+                        <div class="shortcutName text-light text-md text-b p8">
+                            Tran Hong Son
+                        </div>
+                    </div>
+                    <div class="shortcutItem flex btn-hover">
+                        
+                        <div class="shortcutIcon p5">
+                            <img class="avatar sm-icon" src="./assets/imgs/fv5.png" alt="">
+                        </div>
+                        <div class="shortcutName text-light text-md text-b p8">
+                            Favorites
+                        </div>
+                    </div>
+                    <div class="shortcutItem flex btn-hover">
+                        <div class="shortcutIcon p5">
+                            <img  class="avatar sm-icon" src="./assets/imgs/gameVideo.png" alt="">
+                        </div>
+                        <div class="shortcutName text-light text-md text-b p8">
+                            Newfeed
+                        </div>
+                    </div>
+                    <div class="shortcutItem flex btn-hover">
+                        <div class="shortcutIcon p5">
+                            <img class="avatar sm-icon" src="./assets/imgs/messengerShortcut.png" alt="">
+                        </div>
+                        <div class="shortcutName text-light text-md text-b p8">
+                            Messenger
+                        </div>
+                    </div>
+                    <div class="shortcutItem flex btn-hover">
+                        <div class="shortcutIcon p5">
+                            <img class="avatar sm-icon" src="./assets/imgs/PageShortcut.png" alt="">
+                        </div>
+                        <div class="shortcutName text-light text-md text-b p8">
+                            Pages
+                        </div>
+                    </div>
+                    <div class="shortcutItem flex btn-hover">
+                        <div class="shortcutIcon p5">
+                            <img class="avatar sm-icon" src="./assets/imgs/GroupShortcut.png" alt="">
+                        </div>
+                        <div class="shortcutName text-light text-md text-b p8">
+                            Groups
+                        </div>
+                    </div>
+                    <div class="shortcutItem flex btn-hover">
+                        <div class="shortcutIcon p5">
+                            <img class="avatar sm-icon" src="./assets/imgs/FriendListShortcut.png" alt="">
+                        </div>
+                        <div class="shortcutName text-light text-md text-b p8">
+                            Friend Lists
+                        </div>
+                    </div>
+                    <div class="shortcutItem flex btn-hover">
+                        <div class="shortcutIcon p5">
+                            <img class="avatar sm-icon" src="./assets/imgs/market.png" alt="">
+                        </div>
+                        <div class="shortcutName text-light text-md text-b p8">
+                            Market place
+                        </div>
+                    </div>
+                    <div class="shortcutItem flex btn-hover">
+                        <div class="shortcutIcon p5">
+                            <img class="avatar sm-icon" src="./assets/imgs/gameShortcut.png" alt="">
+                        </div>
+                        <div class="shortcutName text-light text-md text-b p8">
+                            Games
+                        </div>
+                    </div>
+                    <div class="shortcutItem flex btn-hover">
+                        <div class="shortcutIcon p5">
+                            <img class="avatar sm-icon" src="./assets/imgs/SavedShortcut.png" alt="">
+                        </div>
+                        <div class="shortcutName text-light text-md text-b p8">
+                            Saved
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="shortcutMore flex pv5 shortcutItem btn-hover  mt-10" data-target=".shortcutLShort">
+                    &nbsp;
+                    <img class="emote20 p8 bg-rgb2 border-radius-r" src="./assets/imgs/caret-down-solid.svg" alt="">
+                    <div class="shortcutName text-light text-md text-b p8">
+                       See More 
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="center">
+                <div class="addPhoto flex mt-20 bg-rgb1 pv8 border-radius10 slider" data-hide="#main" data-show="#leftAdd">
+                    <div class="col-md-2">
+                        <img src="./assets/imgs/plus-thin.svg" class="emote20 p10 bg-rgb2 hover border-radius-r" alt="">
+                    </div>
+                    <div class="col-md-10 flex-col text-light" >
+                        <div class="text-left text-b">
+                            Add to Your Story
+                        </div>
+                        <div class="text-left text-b">
+                            Share a photo or text to your story
+                        </div>
+                    </div>
+                </div>
+                <div class="add-newfeed bg-rgb1 border-radius10 ">
+                    <div class="upper-newfeed flex half-h">
+                        <div class="add-newfeed-avatar">
+                            <img class="highlight" src="./assets/imgs/sern.jpg" alt="">
+                        </div>
+                        <div class="thinking flex">
+                            <div class="inner-thinking text-light dialog" data-target="#modal1" >
+                                <b>Hey! What are you thinking?</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="emote-newfeed flex">
+                        <div class="emotes-item p8 ">
+                            <div class="button-emote flex justify-item">
+                                <img class="emote20" src="./assets/imgs/video-live.png"/>
+                                &nbsp;
+                                <div class="emote-text text-light ml5">
+                                    <b>Live Video</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emotes-item p8">
+                            <div class="button-emote flex justify-item">
+                                <img class="emote20" src="./assets/imgs/image-icon.png"/>
+                                &nbsp;
+                                <div class="emote-text text-light ml5">
+                                    <b>Images/Video</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emotes-item p8">
+                            <div class="button-emote flex justify-item">
+                                <img class="emote20" src="./assets/imgs/smile.png"/>
+                                &nbsp;
+                                <div class="emote-text text-light ml5">
+                                    <b>Emotes/Actions</b>
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="newfeed mt-10">
+                    <div class="newfeed-item lazyload"  data-src="./assets/imgs/imgPlaceholder.svg">
+                        <div class="newfeed-header flex">
+                            <div class="newfeed-avatar">
+                                <img class="avatar" src="./assets/imgs/sern.jpg" alt="">
+                            </div>
+                            <div class="newfeed-username text-default">
+                               <b> PLAYERUNKNOWN'S BATTLEGROUNDS 's livestreaming ————— playing</b> <a href="/#"><b>PLAYERUNKNOWN'S BATTLEGROUNDS</b></a>.
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="newfeed-content">
+                            <img class="content " src="./assets/imgs/sern.jpg"  alt="">
+                        </div>
+                        <div class="newfeed-footer">
+                            <div class="newfeed-info">
+
+                            </div>
+                            <div class="newfeed-interact">
+                                <div class="newfeed-quick-interact">
+
+                                </div>
+                                <div class="newfeed-comment">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="right">
+                <div class="friends">
+                    <div class="friend-action flex justify-item">
+                        <div class="col-md-9">
+                            <p class="text-light">
+                                <b>
+                                    Contacts
+                                </b>
+                            </p>
+                        </div>
+                        <div class="col-md-3 justify-item">
+                            <img src="./assets/imgs/search.svg" class="emote-icon" alt="">
+                            <img src="./assets/imgs/more.svg" class="emote-icon" alt="">
+                        </div>
+                    </div>
+                    <div class="friend-list mt-10">
+
+                        <div class="friendL-item hover p8 border-radius10 htmlTooltip" data-delay="3500" data-pos="left" data-tooltip="#modal1">
+                            <img src="./assets/imgs/friendHolder.svg" alt="">
+                        </div>
+                        <div class="friendL-item hover p8 border-radius10 htmlTooltip" data-delay="3500" data-pos="left" data-tooltip="#modal1">
+                            <img src="./assets/imgs/friendHolder.svg" alt="">
+                        </div>
+                        <div class="friendL-item hover p8 border-radius10 htmlTooltip" data-delay="3500" data-pos="left" data-tooltip="#modal1">
+                            <img src="./assets/imgs/friendHolder.svg" alt="">
+                        </div>
+                        <div class="friendL-item hover p8 border-radius10 htmlTooltip" data-delay="3500" data-pos="left" data-tooltip="#modal1">
+                            <img src="./assets/imgs/friendHolder.svg" alt="">
+                        </div>
+                        <div class="friendL-item hover p8 border-radius10 htmlTooltip" data-delay="3500" data-pos="left" data-tooltip="#modal1">
+                            <img src="./assets/imgs/friendHolder.svg" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper flex hidden postAddNew" id="leftAdd">
+            <div class="col-md-3 bg-rgb1">
+                <div class="col-md-3 slider" data-show="#main" data-hide="#leftAdd">
+                    <img src="./assets/imgs/back.svg" class="btn-icon border-radius-r hover" alt="">
+                </div>
+            </div>
+            <div class="col-md-9">
+
+            </div>
+        </div>
+    </div>
+    <div id="modal1" class="hidden ">
+        <div class="newFeedH ">
+            <div class="container justify-item text-light">
+                <h3 >Create Post</h3>
+            </div>
+
+        </div>
+        <div class="newFeedM container flex bg-primary p5 ">
+            <div class="leftNewFeedM">
+                <img class="avatar mt-10" src="./assets/imgs/sern.jpg" alt="">
+            </div>
+            <div class="rightNewFeedM">
+                <span class="text-light"><b>Tran Hong Son</b></span>
+                <div class="btnFriend btn-static p4 tooltip" data-body="Your friends">
+                    &nbsp;
+                    <img src="./assets/imgs/user-friends-solid.svg" class="btn-icon-sm ml5" alt="">
+                    <span class="text-default text-sm"><b>Friends</b></span>
+                    <img src="./assets/imgs/caret-down-solid.svg" class="btn-icon-sm ml5" alt="">
+                </div>
+
+            </div>
+        
+        </div>
+        <div class="centerNewFeed container mt-10">
+            <textarea tabindex="1"  class="centerNewFeedText text-default text-lg" placeholder="What's in your mind,Tran?"></textarea>
+        </div>
+        <div class="actionBtnNewFeed flex">
+            <div class="w50 text-default ">
+                <p class="addPost"><b>Add to Your Post</b></p>
+            </div>
+            <div class="w50 flex">
+                <div class="emoteItem tooltip" data-body="Photo/Video">
+                    <img src="./assets/imgs/image-icon.png" class="emote-icon" alt="">
+                </div>
+                <div class="emoteItem tooltip" data-body="Tag Friends">
+                    <img src="./assets/imgs/friendTag.png" class="emote-icon" alt="">
+                </div>
+                <div class="emoteItem tooltip" data-body="Check in">
+                    <img src="./assets/imgs/location.png" class="emote-icon" alt="">
+                </div>
+                <div class="emoteItem tooltip" data-body="Feeling/Activity">
+                    <img src="./assets/imgs/smile.png" class="emote-icon" alt="">
+                </div>
+                <div class="emoteItem tooltip" data-body="More">
+                    <img src="./assets/imgs/more.svg" class="emote-icon" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container btnAddNewFeed mt-10">
+            <div class="btn-static p10 text-center justify-item" >Post</div>
+        </div>
+    </div>
+    <div id="modal2" class="hidden ">
+        <div class="newFeedH container">
+            <h5 >Create Post</h5>
+
+        </div>
+        <div class="newFeedM container flex bg-primary">
+            <div class="leftNewFeedM">
+                <img class="avatar" src="./assets/imgs/sern.jpg" alt="">
+            </div>
+            <div class="rightNewFeedM">
+                <span>Tran Hong Son</span>
+                <div class="btnFriend">
+                    <img src="./assets/imgs/user-friends-solid.svg" class="avatar" alt="">
+                    <span>Friends</span>
+                    <img src="./assets/imgs/caret-down-solid.svg" class="avatar" alt="">
+                </div>
+
+            </div>
+        
+        </div>
+        <div class="centerNewFeed container">
+            <textarea name="" id="" cols="30" rows="10">What's in your mind,Tran?</textarea>
+        </div>
+        <div class="actionBtnNewFeed container flex">
+            <div class="w50">
+                Add to Your Post
+            </div>
+            <div class="w50 flex">
+                <img src="./assets/imgs/image-icon.png" class="emote-icon" alt="">
+                <img src="./assets/imgs/friendTag.png" class="emote-icon" alt="">
+                <img src="./assets/imgs/location.png" class="emote-icon" alt="">
+                <img src="./assets/imgs/smile.png" class="emote-icon" alt="">
+            </div>
+        </div>
+        <div class="container btnAddNewFeed">
+            <button>Post</button>
+        </div>
+    </div>
+</body>
+</html>
