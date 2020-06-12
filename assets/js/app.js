@@ -1,6 +1,11 @@
 
 jQuery(document).ready(function(){
 
+  jQuery(document).on("click","#uploadCenter",function(){
+    var file = document.getElementById("fileSrc");
+    file.click();
+  });
+    jQuery(document).find(".hide").hide();
     $(document).on("click",".dialog",function(e) {
         e.preventDefault();
         var modal = jQuery(this).attr("data-target");
@@ -19,7 +24,7 @@ jQuery(document).ready(function(){
            tippy(element, {
             content: body,
       });
-
+      
       var tooltipHtmls = jQuery(document).find(".htmlTooltip");
       jQuery.each(tooltipHtmls,function(e){
         var self = jQuery(this);
@@ -43,7 +48,6 @@ jQuery(document).ready(function(){
           allowHTML: true,
           interactive: true
         };
-        console.log(options);
         tippy(this,options );
       })
       
@@ -75,15 +79,14 @@ jQuery(document).ready(function(){
         var show = self.attr("data-show");
 
         setTimeout(function(){
-
-
+          jQuery(show).animate({left: '2px'},500);
           jQuery(hide).hide();
           jQuery(show).removeClass("hidden").show();
-
-        },1000);
+          
+        },200);
 
 
       });
-
+      
     });
 });

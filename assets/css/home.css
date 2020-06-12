@@ -1,4 +1,4 @@
-#app{
+body{
     width: 100vw;
     height: auto;
     position: relative;
@@ -446,4 +446,53 @@
 }
 .friend-action{
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.postAddNew {
+    margin-top: 0;
+}
+
+.StoriesConfig{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.storyWrapper{
+    position: relative;
+}
+.storyCenter{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 460px;
+    height: 330px;
+}
+.pair{
+    width: 220px;
+    height: 330px;
+    cursor: pointer;
+}
+.pair1{
+    background-image: url('../imgs/2pair.png');
+    background-position: 98% 0;
+    width: 100%;
+    height: 330px;
+    position: relative;
+}
+.pair2{
+    background-image: url('../imgs/2pair.png');
+    background-position: 98% 94%;
+    width: 100%;
+    height: 330px;
+    position: relative;
+}
+.uploadBlock{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgb(57, 62, 68);
+    box-shadow: 0 2px 4px #B0B3B8;
+    cursor: pointer;
 }

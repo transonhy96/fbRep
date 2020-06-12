@@ -6,11 +6,11 @@
     <title>Home</title>
     <link rel="stylesheet" href="./assets/css/utils.css">
     <link rel="stylesheet" href="./assets/css/home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="./assets/css/modal.min.css" />
     <script src="./assets/js/jquery.min.js"></script>
-    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="./assets/js/pooper.min.js"></script>
+    <script src="./assets/js/tippy.js"></script>
+    <script src="./assets/js/jquery.modal.min.js"></script>
     <script src="./assets/js/app.js"></script>
 </head>
 <body>
@@ -18,7 +18,7 @@
         <nav class="top-nav flex">
             <div class="nav-left ">
                 <div class="nav-logo-wrapper flex">
-                    <div class="nav-logo brand-img">    `   
+                    <div class="nav-logo brand-img">
                     </div>
                     <div class="nav-search">
                         <input type="text"  class="input-search">
@@ -166,7 +166,7 @@
                 </div>
             </div>
             <div class="center">
-                <div class="addPhoto flex mt-20 bg-rgb1 pv8 border-radius10 slider" data-hide="#main" data-show="#leftAdd">
+                <div class="addPhoto flex mt-20 bg-rgb1 pv8 border-radius10 slider" data-hide="#app" data-show="#leftAdd">
                     <div class="col-md-2">
                         <img src="./assets/imgs/plus-thin.svg" class="emote20 p10 bg-rgb2 hover border-radius-r" alt="">
                     </div>
@@ -296,17 +296,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="wrapper flex hidden postAddNew" id="leftAdd">
-            <div class="col-md-3 bg-rgb1">
-                <div class="col-md-3 slider" data-show="#main" data-hide="#leftAdd">
-                    <img src="./assets/imgs/back.svg" class="btn-icon border-radius-r hover" alt="">
-                </div>
-            </div>
-            <div class="col-md-9">
-
-            </div>
-        </div>
     </div>
     <div id="modal1" class="hidden ">
         <div class="newFeedH ">
@@ -396,6 +385,66 @@
         </div>
         <div class="container btnAddNewFeed">
             <button>Post</button>
+        </div>
+    </div>
+    <div class="wrapper flex hide postAddNew bg-primary" id="leftAdd">
+        <div class="col-md-3 bg-rgb1 flex-col">
+            <div class="backNav shadow-black">
+                <div class="col-md-1 mt-10 ml25 ">
+                    <img src="./assets/imgs/close.svg" data-show="#app" data-hide="#leftAdd" class="emote20 hover bg-rgb1 p10 border-radius-r slider" alt="">
+                </div>
+            </div>
+            <div class="StoriesConfig flex">
+                <div class="col-md-10 mt-20 ml25">
+                    <div class="innerConfig flex-col">
+                        <span class="text-light text-sm">Stories</span>
+                        <div class="text-light text-xs"><b>Your story</b></div>
+                        <div class="avatarConfig justify-item">
+                            <div class="col-md-4">
+                                <img src="./assets/imgs/sern.jpg" class="border-radius-r" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="text-light">Tran Hong Son</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 mt-20">
+                    <img src="./assets/imgs/cog.png" class="emote20 p8 color-inverse hover bg-rgb1 border-radius-r" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 storyWrapper">
+            <div id="firstAppear">
+                <div class="storyCenter flex">
+                    <div class="col-md-6 pair border-radius10 pair1" id="uploadCenter">
+                       <div class="uploadCenter justify-item">
+                           <div class="uploadBlock justify-item">
+                            <img src="./assets/imgs/imgBlack.png" class="color-inverse" alt="">
+                            <input type="file" id="fileSrc" class="hidden">
+                           </div>
+                           <p class="text-light"><b>Add Photo</b></p>
+                       </div>
+                       
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-6 pair border-radius10 pair2 slider" data-hide="#firstAppear" data-show="#secondAppear">
+                        <div class="uploadCenter justify-item">
+                            <div class="uploadBlock justify-item">
+                             <b class="text-light">Aa</b>
+                             <input type="file" class="hide">
+                            </div>
+                            <p class="text-light"><b>Add Text Story</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="secondAppear justify-item hide">
+                <div class="col-md-9">
+                    Preview
+
+                </div>
+            </div>
         </div>
     </div>
 </body>

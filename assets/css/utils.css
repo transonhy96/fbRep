@@ -12,6 +12,7 @@ body{
 .hidden{
     display: none;
 }
+
 .mt-4{
     margin-top:4px;
 }
@@ -100,6 +101,9 @@ body{
 }
 .shadow{
     box-shadow: inset 0 1px 1px rgba(0,0,0,0.0125),0 0 8px rgba(34,139,230,0.5);
+}
+.shadow-black{
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.0125),0 0 8px rgba(36, 39, 43, 0.5);
 }
 .half-h{
     width: 100%;
@@ -239,6 +243,12 @@ body{
 .ml5{
     margin-left: 5px;
 }
+.ml10{
+    margin-left: 10px;
+}
+.ml25{
+    margin-left: 25px;
+}
 .sm-icon{
     width: 40px;
     height: 40px;
@@ -251,6 +261,12 @@ body{
 }
 .text-lg{
     font-size: large;
+}
+.text-xsmax{
+    font-size: xx-large;
+}
+.text-xs{
+    font-size:x-large;
 }
 .text-b{
     font-weight: bold;
@@ -341,4 +357,7 @@ input::placeholder {
 }
 .f-right{
     float: right;
+}
+.color-inverse{
+    filter: invert();
 }
