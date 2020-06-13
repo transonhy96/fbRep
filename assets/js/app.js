@@ -1,11 +1,49 @@
 
+var Utils = {
+
+
+  readURL : function(input,target) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        $(target).attr('src', e.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+}
+
 jQuery(document).ready(function(){
+
+  jQuery(document).on("change","#myRange",function(){
+
+      var self= jQuery(this);
+      var target = self.attr("data-target");
+      if(!self.attr("data-w-original") &&  !self.attr("data-h-original")){
+        jQuery(target).attr("data-w-original",jQuery(target).width());
+        jQuery(target).attr("data-h-original",jQuery(target).height());
+      }
+      console.log(self.val());
+      jQuery(target).width(jQuery(target).attr("data-w-original") *self.val());
+      jQuery(target).height(jQuery(target).attr("data-h-original") *self.val());
+  });
+
 
   jQuery(document).on("click","#uploadCenter",function(){
     var file = document.getElementById("fileSrc");
     file.click();
   });
+
+  jQuery(document).on("change","#fileSrc",function() {
+    var target = jQuery(this).attr("data-target");
+    Utils.readURL(this,target);
+    jQuery(document).find("#storyConfig").empty();
+    console.log(jQuery("#secondAppear").html())
+    jQuery(document).find("#storyConfig").html(jQuery("#secondAppear").html());
+  });
+
     jQuery(document).find(".hide").hide();
+
     $(document).on("click",".dialog",function(e) {
         e.preventDefault();
         var modal = jQuery(this).attr("data-target");

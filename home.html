@@ -413,22 +413,33 @@
                     <img src="./assets/imgs/cog.png" class="emote20 p8 color-inverse hover bg-rgb1 border-radius-r" alt="">
                 </div>
             </div>
+            <div class="storyProp">
+                <p>Add Text</p>
+            </div>
+            <div class="footerStory flex">
+                <div class="col-md-6 text-light">
+                    Discard
+                </div>
+                <div class="col-md-6 text-light">
+                    Share to Story
+                </div>
+            </div>
         </div>
-        <div class="col-md-9 storyWrapper">
+        <div class="col-md-9 storyWrapper" id="storyConfig">
             <div id="firstAppear">
                 <div class="storyCenter flex">
-                    <div class="col-md-6 pair border-radius10 pair1" id="uploadCenter">
+                    <div class="col-md-6 pair border-radius10 pair1 " id="uploadCenter">
                        <div class="uploadCenter justify-item">
                            <div class="uploadBlock justify-item">
                             <img src="./assets/imgs/imgBlack.png" class="color-inverse" alt="">
-                            <input type="file" id="fileSrc" class="hidden">
+                            <input type="file" id="fileSrc" data-target="#imgPreviewer" class="hidden">
                            </div>
                            <p class="text-light"><b>Add Photo</b></p>
                        </div>
                        
                     </div>
                     <div class="col-md-2"></div>
-                    <div class="col-md-6 pair border-radius10 pair2 slider" data-hide="#firstAppear" data-show="#secondAppear">
+                    <div class="col-md-6 pair border-radius10 pair2">
                         <div class="uploadCenter justify-item">
                             <div class="uploadBlock justify-item">
                              <b class="text-light">Aa</b>
@@ -439,11 +450,38 @@
                     </div>
                 </div>
             </div>
-            <div id="secondAppear justify-item hide">
-                <div class="col-md-9">
-                    Preview
+            
+        </div>
+    </div>
 
+    <div id="secondAppear" class="justify-item hide">
+        <div class="col-md-9 previewSlot">
+            <div class="previewer flex-col border-radius10">
+                <p class="col-md-1 ml10">
+                    <b class="text-light">
+                        Preview
+                    </b>
+                </p>
+                <div class="previewerIn border-radius10">
+                    <div class="storyCenter">
+                        <div class="imgHolder border-radius10">
+                            <img id="imgPreviewer" class="border-radius10" alt="">
+                        </div>
+                        <div class="slidecontainer flex">
+                            <div class=" text-light emote20 justify-item border-radius-r hover">
+                                -
+                            </div>
+                            <div class="col-md-11">
+                                <input type="range" min="1" max="2" step="0.1" value="1" data-target="#imgPreviewer" class="sliders shadow-black" id="myRange">
+                            </div>
+                            <div class="text-light emote20  justify-item border-radius-r hover">
+                                +
+                            </div>
+                          </div> 
+                    </div> 
+                    
                 </div>
+
             </div>
         </div>
     </div>
