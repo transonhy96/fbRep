@@ -93,6 +93,8 @@ jQuery(document).ready(function(){
       jQuery(document).find(".lazyload").each(function(){
 
         var self = jQuery(this);
+        var src = self.attr("data-source");
+        self.css("background",src);
         self.find("div").addClass("hidden");
         setTimeout(function(){
           self.removeClass("lazyload");
@@ -105,9 +107,18 @@ jQuery(document).ready(function(){
       jQuery(document).on("click",".shortcutMore",function(){
 
         var target = jQuery(this).data("target");
-        $(target).slideToggle( "fast", function() {
-
-        });
+        var tar = jQuery(target);
+        if(tar.hasClass("closed")){
+          tar.stop().slideDown("fast");
+          tar.removeClass("closed");
+          tar.addClass("opened")
+        }
+        else if(tar.hasClass("opened")){
+          tar.stop().slideUp("fast");
+          tar.removeClass("opened");
+          tar.addClass("closed")
+        }
+        
 
       });
       jQuery(document).on("click",".slider",function(){
@@ -117,7 +128,7 @@ jQuery(document).ready(function(){
         var show = self.attr("data-show");
 
         setTimeout(function(){
-          jQuery(show).animate({left: '2px'},500);
+          jQuery(show).animate({left: '0px'},500);
           jQuery(hide).hide();
           jQuery(show).removeClass("hidden").show();
           

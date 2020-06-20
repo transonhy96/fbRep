@@ -8,47 +8,67 @@
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-    <nav>
-        <div class="brand-section">
-            <div class="brand-img avatar">
-            </div>
+    <div id="app">
+        <div id="animation">
+            <img id="anim" src="./assets/imgs/blob_anim.svg" alt="">
         </div>
+        <div id="animation2">
+        </div>
+        <nav>
+            <div class="brand-section">
+                <div class="brand-img avatar">
+                </div>
+            </div>
+    
+        </nav>
+    
+        <form action="/home.html" class="center-popup flex">
+            <div class="form-left">
+                <div class="header center header-primary">
+                   <p class="header-text"> Welcome back!</p>
+                   <p class="text-normal">We're so excited to see you again!</p>
+                </div>
+                <div class="input-wrapper">
+                    <label for="email" class="text-normal text-label"><b>EMAIL</b></label>
+                    <input type="email" class="input"/>
+                </div>
+                <div class="input-wrapper">
+                    <label for="password" class="text-normal text-label"><b>PASSWORD</b></label>
+                    <input type="password" class="input"/>
+                    <a class="link">Forgot your password?</a>
+                </div>
+                <div class="input-wrapper">
+                    <button type="submit" class="btn" >
+                        <b>Login</b>
+                    </button>
+                </div>
+               
+            </div>
+            <div class="form-right flex-col ">
+                <div class="barcode" id="barcode">
+                    <img id="barcode-img" class="barcode-img" src="./assets/imgs/qr2.png" alt="">
+                </div>
+                <p class="center">Log in with QR Code</p>
+                <span class="center">
+                    Scan this with the 
+                    <strong> mobile app</strong> to log in instantly.
+                </span>
+            </div>
+            
+        </form>
+    </div>
+    <script>
+        var bar_img = document.getElementById("barcode-img");
+        setInterval(function(){
+            bar_img.src="./assets/imgs/loading.svg";
+            setTimeout(function(){
+                bar_img.src = "./assets/imgs/qr2.png";
+            },2000);
 
-    </nav>
 
-    <form action="/home.html" class="center-popup flex">
-        <div class="form-left">
-            <div class="header center header-primary">
-               <p class="header-text"> Welcome back!</p>
-               <p class="text-normal">We're so excited to see you again!</p>
-            </div>
-            <div class="input-wrapper">
-                <label for="email" class="text-normal text-label"><b>EMAIL</b></label>
-                <input type="email" class="input"/>
-            </div>
-            <div class="input-wrapper">
-                <label for="password" class="text-normal text-label"><b>PASSWORD</b></label>
-                <input type="password" class="input"/>
-                <a class="link">Forgot your password?</a>
-            </div>
-            <div class="input-wrapper">
-                <button type="submit" class="btn" >
-                    <b>Login</b>
-                </button>
-            </div>
-           
-        </div>
-        <div class="form-right flex-col">
-            <div class="barcode">
-                <img class="barcode-img" src="./assets/imgs/at.png" alt="">
-            </div>
-            <p class="center">Log in with QR Code</p>
-            <span class="center">
-                Scan this with the 
-                <strong>Discord mobile app</strong> to log in instantly.
-            </span>
-        </div>
-        
-    </form>
+        },12000);
+    </script>
+    <script src="./assets/js/particles.min.js"></script>
+    <script src="./assets/js/particle_config.js"></script>
 </body>
 </html>

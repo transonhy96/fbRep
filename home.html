@@ -27,9 +27,9 @@
                 </div>
             </div>
             <div class="nav-center flex">
-                <div class="icon-block">
+                <div class="icon-block slider" data-show="#main" data-hide="#me" data-body="Home page">
                     <div class="active"> 
-                        <img class="wh25x25 icon tooltip" data-body="Home page" src="./assets/imgs/home.svg" alt=""/>
+                        <img class="wh25x25 icon tooltip active "  src="./assets/imgs/home.svg" alt=""/>
                     </div>
                 </div>
                 <div class="icon-block">
@@ -50,10 +50,10 @@
             </div>
             <div class="nav-right flex">
                 <div class="feature-list flex">
-                    <div class="my-info flex">
+                    <a class="my-info flex link slider" data-show="#me" data-hide="#main" >
                         <img src="./assets/imgs/sern.jpg" alt="">
                         <span class="username">Tran Hong Son</span>
-                    </div>
+                    </a>
                     <div class="feature-icon ml5">
                         <img class="feature-icon-img htmlTooltip" data-show-onclick="true" data-tooltip="#modal1" src="./assets/imgs/plus-thin.svg" alt="" width="20" height="20">
                     </div>
@@ -61,7 +61,7 @@
                         <img class="feature-icon-img htmlTooltip" data-show-onclick="true" data-tooltip="#modal1" src="./assets/imgs/facebook-messenger-brands.svg" alt="" width="20" height="20">
                     </div>
                     <div class="feature-icon ml5">
-                        <img class="feature-icon-img htmlTooltip" data-show-onclick="true" data-tooltip="#modal1" src="./assets/imgs/bell-solid.svg" alt="" width="20" height="20">
+                        <img class="feature-icon-img htmlTooltip" data-show-onclick="true" data-tooltip="#modal3" src="./assets/imgs/bell-solid.svg" alt="" width="20" height="20">
                     </div>
                     <div class="feature-icon ml5">
                         <img class="feature-icon-img htmlTooltip" data-show-onclick="true" data-tooltip="#modal1" src="./assets/imgs/caret-down-solid.svg" alt="" width="20" height="20">
@@ -72,10 +72,10 @@
         </nav>
         <div class="wrapper flex" id="main">
             <div class="left">
-                <div class="shortcutLShort flex-col">
+                <div class="shortcutLShort flex-col opened">
                     <div class="shortcutItem flex btn-hover">
                         <div class="shortcutIcon p5">
-                            <img class="avatar sm-icon" src="./assets/imgs/sern.jpg" alt="">
+                            <img class="avatar sm-icon" width="30" height="30" src="./assets/imgs/sern.jpg" alt="">
                         </div>
                         <div class="shortcutName text-light text-md text-b p8">
                             Tran Hong Son
@@ -160,7 +160,6 @@
                     &nbsp;
                     <img class="emote20 p8 bg-rgb2 border-radius-r" src="./assets/imgs/caret-down-solid.svg" alt="">
                     <div class="shortcutName text-light text-md text-b p8">
-                       See More 
                     </div>
                     
                 </div>
@@ -221,19 +220,19 @@
                     </div>
                 </div>
                 <div class="newfeed mt-10">
-                    <div class="newfeed-item lazyload"  data-src="./assets/imgs/imgPlaceholder.svg">
+                    <div class="newfeed-item lazyload"  id="nf1"  data-src="./assets/imgs/imgPlaceholder.svg">
                         <div class="newfeed-header flex">
-                            <div class="newfeed-avatar">
+                            <div class="newfeed-avatar slider" data-show="#me" data-hide="#main">
                                 <img class="avatar" src="./assets/imgs/sern.jpg" alt="">
                             </div>
                             <div class="newfeed-username text-default">
-                               <b> PLAYERUNKNOWN'S BATTLEGROUNDS 's livestreaming ————— playing</b> <a href="/#"><b>PLAYERUNKNOWN'S BATTLEGROUNDS</b></a>.
+                               <b> PLAYERUNKNOWN'S BATTLEGROUNDS 's sharing</b>
                                 
                             </div>
                             
                         </div>
-                        <div class="newfeed-content">
-                            <img class="content " src="./assets/imgs/sern.jpg"  alt="">
+                        <div class="newfeed-content dialog" data-target="#mdNewfeed">
+                            <img class="content " src="./assets/imgs/astroneer.jpg"  alt="">
                         </div>
                         <div class="newfeed-footer">
                             <div class="newfeed-info">
@@ -241,18 +240,30 @@
                             </div>
                             <div class="newfeed-interact">
                                 <div class="newfeed-quick-interact flex">
-                                    <div class="col-md-4 text-light p8 hover border-radius10">
-                                        Like
+                                    <div class="col-md-4 text-light p8 hover border-radius10 flex justify-item">
+                                        <img src="./assets/imgs/like.svg" width="24" height="24" alt="">
+                                        &nbsp;
+                                        <div class="text-light">
+                                            Like
+                                        </div>
                                     </div>
-                                    <div class="col-md-4 text-light p8 hover border-radius10">
+                                    <div class="col-md-4 text-light p8 hover border-radius10 flex justify-item">
+                                        <img src="./assets/imgs/comment2.svg" width="24" height="24" alt="">
+                                        &nbsp;
+                                       <div class="text-light">
                                         Comment
+                                       </div>
                                     </div>
-                                    <div class="col-md-4 text-light p8 hover border-radius10">
-                                        Share
+                                    <div class="col-md-4 text-light p8 hover border-radius10 flex justify-item">
+                                        <img src="./assets/imgs/comment2.svg" width="24" height="24" alt="">
+                                        &nbsp;
+                                        <div class="text-light">
+                                            Share
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="newfeed-comment ">
-
+                                    <input type="text" placeholder="Leave your comment">
                                 </div>
                             </div>
                         </div>
@@ -296,8 +307,47 @@
                 </div>
             </div>
         </div>
+        <div class="messenger">
+            <img src="./assets/imgs/plus2.svg" class="emote25  p15 bg-rgb4 border-radius-r hover htmlTooltip" data-show-onclick="true" data-tooltip="#modalMessenger" alt="">
+        </div>
     </div>
-    <div id="modal1" class="hidden ">
+    <div id="mdNewfeed" class="hidden">
+        <div class="newfeed-content">
+            <img class="content" src="./assets/imgs/astroneer.jpg"  alt="">
+        </div>
+    </div>
+    <div id="modalMessenger" class="hidden">
+        <div class="messengerMess">
+            <div class="messheader">
+                <h3><b>New message</b></h3>
+                <span>To :</span> <input type="text" tabindex="1">
+            </div>
+            <div class="mess-content">
+
+            </div>
+            <div class="messfunction">
+                <div class="messfunction-list flex">
+                    <div class="emoteItem tooltip" data-body="Photo/Video">
+                        <img src="./assets/imgs/image-icon.png" class="emote-icon" alt="">
+                    </div>
+                    <div class="emoteItem tooltip" data-body="Tag Friends">
+                        <img src="./assets/imgs/friendTag.png" class="emote-icon" alt="">
+                    </div>
+                    <div class="emoteItem tooltip" data-body="Check in">
+                        <img src="./assets/imgs/location.png" class="emote-icon" alt="">
+                    </div>
+                    <div class="emoteItem tooltip" data-body="Feeling/Activity">
+                        <img src="./assets/imgs/smile.png" class="emote-icon" alt="">
+                    </div>
+                    <input type="text" placeholder="Aa" class="input">
+                    <div class="emoteItem tooltip" data-body="More">
+                        <img src="./assets/imgs/more.svg" class="emote-icon" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal1" class="hidden">
         <div class="newFeedH ">
             <div class="container justify-item text-light">
                 <h3 >Create Post</h3>
@@ -328,28 +378,33 @@
                 <p class="addPost"><b>Add to Your Post</b></p>
             </div>
             <div class="w50 flex">
-                <div class="emoteItem tooltip" data-body="Photo/Video">
-                    <img src="./assets/imgs/image-icon.png" class="emote-icon" alt="">
+                <div class="col-md-6">
+                    
                 </div>
-                <div class="emoteItem tooltip" data-body="Tag Friends">
-                    <img src="./assets/imgs/friendTag.png" class="emote-icon" alt="">
-                </div>
-                <div class="emoteItem tooltip" data-body="Check in">
-                    <img src="./assets/imgs/location.png" class="emote-icon" alt="">
-                </div>
-                <div class="emoteItem tooltip" data-body="Feeling/Activity">
-                    <img src="./assets/imgs/smile.png" class="emote-icon" alt="">
-                </div>
-                <div class="emoteItem tooltip" data-body="More">
-                    <img src="./assets/imgs/more.svg" class="emote-icon" alt="">
+                <div class="col-md-6 flex">
+                    <div class="emoteItem tooltip" data-body="Photo/Video">
+                        <img src="./assets/imgs/image-icon.png" class="emote-icon" alt="">
+                    </div>
+                    <div class="emoteItem tooltip" data-body="Tag Friends">
+                        <img src="./assets/imgs/friendTag.png" class="emote-icon" alt="">
+                    </div>
+                    <div class="emoteItem tooltip" data-body="Check in">
+                        <img src="./assets/imgs/location.png" class="emote-icon" alt="">
+                    </div>
+                    <div class="emoteItem tooltip" data-body="Feeling/Activity">
+                        <img src="./assets/imgs/smile.png" class="emote-icon" alt="">
+                    </div>
+                    <div class="emoteItem tooltip" data-body="More">
+                        <img src="./assets/imgs/more.svg" class="emote-icon" alt="">
+                    </div>
                 </div>
             </div>
         </div>
         <div class="container btnAddNewFeed mt-10">
-            <div class="btn-static p10 text-center justify-item" >Post</div>
+            <a class="btn-static p10 text-center justify-item link text-light" href="#close-modal" rel="modal:close" >Post</a>
         </div>
     </div>
-    <div id="modal2" class="hidden ">
+    <div id="modal2" class="hidden">
         <div class="newFeedH container">
             <h5 >Create Post</h5>
 
@@ -387,8 +442,33 @@
             <button>Post</button>
         </div>
     </div>
+    <div id="modal3" class="hidden">
+        <div class="newFeedH container">
+            <h5 >Notifications</h5>
+
+        </div>
+        <div class="friend-list mt-10">
+
+            <div class="friendL-item hover p8 border-radius10 htmlTooltip" data-delay="3500" data-pos="left" data-tooltip="#modal1">
+                <img src="./assets/imgs/friendHolder.svg" alt="">
+            </div>
+            <div class="friendL-item hover p8 border-radius10 htmlTooltip" data-delay="3500" data-pos="left" data-tooltip="#modal1">
+                <img src="./assets/imgs/friendHolder.svg" alt="">
+            </div>
+            <div class="friendL-item hover p8 border-radius10 htmlTooltip" data-delay="3500" data-pos="left" data-tooltip="#modal1">
+                <img src="./assets/imgs/friendHolder.svg" alt="">
+            </div>
+            <div class="friendL-item hover p8 border-radius10 htmlTooltip" data-delay="3500" data-pos="left" data-tooltip="#modal1">
+                <img src="./assets/imgs/friendHolder.svg" alt="">
+            </div>
+            <div class="friendL-item hover p8 border-radius10 htmlTooltip" data-delay="3500" data-pos="left" data-tooltip="#modal1">
+                <img src="./assets/imgs/friendHolder.svg" alt="">
+            </div>
+            
+        </div>
+    </div>
     <div class="wrapper flex hide postAddNew bg-primary" id="leftAdd">
-        <div class="col-md-3 bg-rgb1 flex-col">
+        <div class="col-md-3 bg-rgb1 flex-col leftStories">
             <div class="backNav shadow-black">
                 <div class="col-md-1 mt-10 ml25 ">
                     <img src="./assets/imgs/close.svg" data-show="#app" data-hide="#leftAdd" class="emote20 hover bg-rgb1 p10 border-radius-r slider" alt="">
@@ -413,15 +493,26 @@
                     <img src="./assets/imgs/cog.png" class="emote20 p8 color-inverse hover bg-rgb1 border-radius-r" alt="">
                 </div>
             </div>
-            <div class="storyProp">
-                <p>Add Text</p>
-            </div>
-            <div class="footerStory flex">
-                <div class="col-md-6 text-light">
-                    Discard
+            <div class="storyProp ml25 mt-20 flex hover1 p8 border-radius10 ">
+                <div class="text-light ">
+                    <span class="p8 bg-rgb1 border-radius-r">
+                        <b>Aa</b>
+                    </span>
                 </div>
-                <div class="col-md-6 text-light">
-                    Share to Story
+                <div class="text-light ml10"><b>Add Text</b></div>
+            </div>
+            <div class="footerStory flex shadow-black">
+                <div class="col-md-1"></div>
+                <div class="col-md-5 text-light">
+                    <div class="col-md-11 p8 bg-rgb1 border-radius10 justify-item hover shadow-black slider" data-show="#app" data-hide="#leftAdd">
+                        <b>Discard</b>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5 text-light">
+                    <div class="col-md-11 p8 justify-item  bg-rgb1 border-radius10 hover bg-default shadow-black inner-glow">
+                        <b>Share</b>
+                    </div>
                 </div>
             </div>
         </div>
@@ -453,7 +544,6 @@
             
         </div>
     </div>
-
     <div id="secondAppear" class="justify-item hide">
         <div class="col-md-9 previewSlot">
             <div class="previewer flex-col border-radius10">
@@ -482,6 +572,88 @@
                     
                 </div>
 
+            </div>
+        </div>
+    </div>
+
+    <div id="me" class="hide">
+        <div class="flex" id="mypage">
+            <div class="leftMP col-md-2">
+            </div>
+            <div class="centerMP col-md-8">
+                <div class="meA">
+                    <div class="meBeforeAvatar">
+
+                    </div>
+                    <div class="meAvatar">
+                        <img src="./assets/imgs/sern2.jpg" width="170" height="170" class="border-radius-r border2l hover img-contain" alt="">
+                    </div> 
+                    <div class="addCoverPhoto flex hover p10 border-radius10">
+                        <img src="./assets/imgs/addPhoto.png" class="color-inverse"  alt="">
+                        &nbsp;
+                        <div class="text-light">
+                            <b>
+                                Add Cover Photo
+                            </b>
+                        </div>
+                    </div>
+                </div>
+                <div class="meB">
+                    <div class="meName justify-item">
+                        <h2 class="text-light"><b>
+                            Tran Hong Son
+                        </b></h2>
+                    </div>
+                </div>
+                
+                <div class="meC flex">
+                    <div class="col-md-8 meCLeft flex mt-10">
+                        <div class="meItem hover border-radius10 text-light p10">
+                            <b>Time line</b>
+                        </div>
+                        <div class="meItem hover border-radius10 text-light p10">
+                            <b>About</b>
+                        </div>
+                        <div class="meItem hover border-radius10 text-light p10">
+                            <b>Friends</b>
+                        </div>
+                        <div class="meItem hover border-radius10 text-light p10">
+                            <b>Photos</b>
+                        </div>
+                        <div class="meItem hover border-radius10 text-light p10">
+                            <b>Archives</b>
+                        </div>
+                        
+                        <div class="meItem hover border-radius10 text-light p10">
+                            <b>More</b>
+                        </div>
+                       
+                    </div>
+                    <div class="col-md-4 meCRight  mt-10">
+                        <div class="f-right flex">
+                            <div class="meItem hover border-radius10 text-light p10 ml10 bg-rgb2 justify-item">
+                                <img src="./assets/imgs/edit.png" width="16" height="16" class="color-inverse " alt="">
+                                &nbsp;
+                                <b>Edit Profile</b>
+                            </div>
+                            <div class="meItem hover border-radius10 text-light p10 ml10 bg-rgb2">
+                               <img src="./assets/imgs/eye.png" width="16" height="16" class="color-inverse" alt="">
+                            </div>
+                            <div class="meItem hover border-radius10 text-light p10 ml10 bg-rgb2">
+                                <img src="./assets/imgs/seach2.png" width="16" height="16" class="color-inverse" alt="">
+                            </div>
+                            <div class="meItem hover border-radius10 text-light p10 ml10 bg-rgb2">
+                                <img src="./assets/imgs/3dot.png" width="16" height="16" class="color-inverse" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="meD">
+
+                </div>
+            </div>
+            <div class="rightMP col-md-2">
             </div>
         </div>
     </div>

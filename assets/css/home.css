@@ -6,7 +6,11 @@ body{
     font-family: Poppin!important;
     scrollbar-width: thin;
 }
-
+.messenger{
+    position: fixed;
+    bottom: 20px;
+    right:20px;
+}
 .top-nav{
     width: 100vw;
     height: 60px;
@@ -47,22 +51,21 @@ body{
 .icon-search{
     position: absolute;
     top:8px;
-    right: 10px;
+    right: 6px;
     width: 15px;
     height: 15px;
     z-index: -1;
    
 }
 .input-search{
-    width: 15px;
+    width: 0px;
     height: 70%;
     margin-left: 30px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    border-radius: 9999px;
-    border-width: .125rem;
-    background-color: rgba(255,255,255,0.1);
-    border-style: solid;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
     outline: none;
     cursor: pointer;
     transition: all .2s ease-in-out;
@@ -70,6 +73,8 @@ body{
 }
 .input-search:focus{
     width: 100px;
+    border-radius: 9999px;
+    border-width: .125rem;
     transition: all .2s ease-in-out;
     border-color:#4dabf7;
     outline: none;
@@ -185,7 +190,7 @@ body{
 
 .center{
     height: auto;
-    width: auto;
+    width: 100%;
     scrollbar-width: thin;
     margin-left: 30%;
     margin-right: 31%;
@@ -330,13 +335,20 @@ body{
 }
 .newfeed-content{
     width: 100%;
-    height: 600px;
+    height: 530px;
     margin:auto;
     margin-top:10px;
 }
 
 .newfeed-footer{
     height: 100px;
+}
+.newfeed-interact{
+    background-color: rgba(0,0,0,0.1);
+    padding:10px 0px;
+    margin-top: -10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 /* .content{
     background-image: url(../imgs/imgPlaceholder.svg);
@@ -349,8 +361,8 @@ body{
 
 .modal{
     font-family: Poppin!important;
-    max-width: 500px!important;
-    max-height: 500px!important;
+    max-width: 800px!important;
+    max-height: 800px!important;
     height: 500px;
     background-color: #36393f!important;
 
@@ -423,7 +435,6 @@ body{
     border-radius: 50%;
     cursor: pointer;
     object-fit: cover;
-    margin: 2px;
 }
 .btnAddNewFeed{
     background-color: rgba(255, 255,255, 0.2);
@@ -590,3 +601,95 @@ input[type=range]:focus {
     background: #4CAF50; /* Green background */
     cursor: pointer; /* Cursor on hover */
   }
+  .storyProp{
+      width: 70%;
+  }
+.leftStories{
+    position: relative;
+  }
+.footerStory{
+    position: absolute;
+    bottom: 0px;
+    padding:20px;
+    width: 90%;
+    left:0px;
+}
+
+
+#me{
+    width: 100%;
+    height: 100vh;
+}
+#modalMessenger{
+    border-radius: 8px;
+}
+.messengerMess{
+    width: 350px;
+    height: 450px;
+    border-radius: 8px;
+}
+.messfunction{
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+#mypage{
+    margin-top: 60px;
+}
+.meA{
+    position: relative;
+}
+.meBeforeAvatar{
+    width: 100%;
+    margin-top:-10px;
+    padding-top: 37.037%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.meAvatar{
+    position: absolute;
+    bottom: -85px;
+    width: 170px;
+    right: 50%;
+    transform: translate(50%, 0);
+}
+.addCoverPhoto{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+.meC{
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.meCRight{
+    float: right;
+}
+.meName{
+    width: 50%;
+    margin:30px auto 0 auto;
+    padding-top: 50px;
+}
+.meD{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#mdNewfeed{
+    width: 600px!important;
+    height: 600px!important;
+}
+.newfeed-comment{
+    width: 100%;
+}
+.newfeed-comment > input{
+    margin-top:10px;
+    width: 96%;
+    background-color: rgba(0,0,0,0.1);
+    border: none;
+    outline: none;
+    height: 30px;
+    border-radius: 10px;
+    padding:10px;
+
+}
