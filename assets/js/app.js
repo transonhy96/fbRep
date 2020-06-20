@@ -34,6 +34,14 @@ jQuery(document).ready(function(){
     file.click();
   });
 
+  jQuery(document).on("click","#changeCover",function(){
+    var file = document.getElementById("fileSrc2");
+    file.click();
+  });
+  jQuery(document).on("change","#fileSrc2",function() {
+    var target = jQuery(this).attr("data-target");
+    Utils.readURL(this,target);
+  });
   jQuery(document).on("change","#fileSrc",function() {
     var target = jQuery(this).attr("data-target");
     Utils.readURL(this,target);
